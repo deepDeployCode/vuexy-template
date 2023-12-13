@@ -1,13 +1,7 @@
 <template>
-  <b-card
-    v-if="data"
-    class="card-tiny-line-stats"
-    body-class="pb-50"
-  >
+  <b-card v-if="data" class="card-tiny-line-stats" body-class="pb-50">
     <h6>Profit</h6>
-    <h2 class="font-weight-bolder mb-1">
-      6,24k
-    </h2>
+    <h2 class="font-weight-bolder mb-1">6,24k</h2>
     <!-- chart -->
     <vue-apex-charts
       height="70"
@@ -18,11 +12,11 @@
 </template>
 
 <script>
-import { BCard } from 'bootstrap-vue'
-import VueApexCharts from 'vue-apexcharts'
-import { $themeColors } from '@themeConfig'
+import { BCard } from "bootstrap-vue";
+import VueApexCharts from "vue-apexcharts";
+import { $themeColors } from "@themeConfig";
 
-const $trackBgColor = '#EBEBEB'
+const $trackBgColor = "#EBEBEB";
 
 export default {
   components: {
@@ -40,8 +34,7 @@ export default {
       statisticsProfit: {
         chartOptions: {
           chart: {
-
-            type: 'line',
+            type: "line",
             toolbar: {
               show: false,
             },
@@ -83,12 +76,12 @@ export default {
               {
                 seriesIndex: 0,
                 dataPointIndex: 5,
-                fillColor: '#ffffff',
+                fillColor: "#ffffff",
                 strokeColor: $themeColors.info,
                 size: 5,
               },
             ],
-            shape: 'circle',
+            shape: "circle",
             radius: 2,
             hover: {
               size: 3,
@@ -98,7 +91,7 @@ export default {
             labels: {
               show: true,
               style: {
-                fontSize: '0px',
+                fontSize: "0px",
               },
             },
             axisBorder: {
@@ -118,7 +111,7 @@ export default {
           },
         },
       },
-    }
+    };
   },
-}
+};
 </script>
