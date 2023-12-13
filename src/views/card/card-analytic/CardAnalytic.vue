@@ -44,19 +44,19 @@
 </template>
 
 <script>
-import { BRow, BCol } from 'bootstrap-vue'
+import { BRow, BCol } from "bootstrap-vue";
 
-import CardAnalyticSessionsByDevice from './CardAnalyticSessionsByDevice.vue'
-import CardAnalyticProductOrders from './CardAnalyticProductOrders.vue'
-import CardAnalyticCustomers from './CardAnalyticCustomers.vue'
-import CardAnalyticSalesRadarChart from './CardAnalyticSalesRadarChart.vue'
-import CardAnalyticSupportTracker from './CardAnalyticSupportTracker.vue'
-import CardAnalyticRevenue from './CardAnalyticRevenue.vue'
-import CardAnalyticGoalOverview from './CardAnalyticGoalOverview.vue'
-import CardAnalyticAvgSessions from './CardAnalyticAvgSessions.vue'
-import CardAnalyticSaleLineChart from './CardAnalyticSaleLineChart.vue'
-import CardAnalyticRevenueReport from './CardAnalyticRevenueReport.vue'
-import CardAnalyticEarningsChart from './CardAnalyticEarningsChart.vue'
+import CardAnalyticSessionsByDevice from "./CardAnalyticSessionsByDevice.vue";
+import CardAnalyticProductOrders from "./CardAnalyticProductOrders.vue";
+import CardAnalyticCustomers from "./CardAnalyticCustomers.vue";
+import CardAnalyticSalesRadarChart from "./CardAnalyticSalesRadarChart.vue";
+import CardAnalyticSupportTracker from "./CardAnalyticSupportTracker.vue";
+import CardAnalyticRevenue from "./CardAnalyticRevenue.vue";
+import CardAnalyticGoalOverview from "./CardAnalyticGoalOverview.vue";
+import CardAnalyticAvgSessions from "./CardAnalyticAvgSessions.vue";
+import CardAnalyticSaleLineChart from "./CardAnalyticSaleLineChart.vue";
+import CardAnalyticRevenueReport from "./CardAnalyticRevenueReport.vue";
+import CardAnalyticEarningsChart from "./CardAnalyticEarningsChart.vue";
 
 export default {
   components: {
@@ -75,9 +75,9 @@ export default {
     CardAnalyticRevenueReport,
     CardAnalyticEarningsChart,
   },
-}
+};
 </script>
 
 <style lang="scss">
-@import '@core/scss/vue/libs/chart-apex.scss';
+@import "@core/scss/vue/libs/chart-apex.scss";
 </style>
