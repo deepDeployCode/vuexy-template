@@ -21,7 +21,7 @@
             <ecommerce-profit-chart :data="data.statisticsProfit" />
           </b-col>
           <b-col lg="12" md="6">
-            <!-- <ecommerce-earnings-chart :data="data.earningsChart" /> -->
+            <ecommerce-earnings-chart :data="data.earningsChart" />
           </b-col>
         </b-row>
       </b-col>
