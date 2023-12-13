@@ -51,7 +51,7 @@ const data = {
     ],
   },
   earningsChart: {
-    series: [53, 16, 31],
+    series: [53, 16, 31, 30, 50, 12, 23, 12],
   },
   revenue: {
     years: ['2020', '2019', '2018'],
