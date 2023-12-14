@@ -1,25 +1,20 @@
 <template>
-  <b-card
-    v-if="data"
-    no-body
-    class="card-revenue-budget"
-  >
+  <b-card v-if="data" no-body class="card-revenue-budget">
     <b-row class="mx-0">
-      <b-col
-        md="8"
-        class="revenue-report-wrapper"
-      >
+      <b-col md="8" class="revenue-report-wrapper">
         <div class="d-sm-flex justify-content-between align-items-center mb-3">
-          <h4 class="card-title mb-50 mb-sm-0">
-            Revenue Report
-          </h4>
+          <h4 class="card-title mb-50 mb-sm-0">Revenue Report</h4>
           <div class="d-flex align-items-center">
             <div class="d-flex align-items-center mr-2">
-              <span class="bullet bullet-primary svg-font-small-3 mr-50 cursor-pointer" />
+              <span
+                class="bullet bullet-primary svg-font-small-3 mr-50 cursor-pointer"
+              />
               <span>Earning</span>
             </div>
             <div class="d-flex align-items-center ml-75">
-              <span class="bullet bullet-warning svg-font-small-3 mr-50 cursor-pointer" />
+              <span
+                class="bullet bullet-warning svg-font-small-3 mr-50 cursor-pointer"
+              />
               <span>Expense</span>
             </div>
           </div>
@@ -35,27 +30,19 @@
         />
       </b-col>
 
-      <b-col
-        md="4"
-        class="budget-wrapper"
-      >
+      <b-col md="4" class="budget-wrapper">
         <b-dropdown
           text="2020"
           size="sm"
           class="budget-dropdown"
           variant="outline-primary"
         >
-          <b-dropdown-item
-            v-for="year in data.years"
-            :key="year"
-          >
+          <b-dropdown-item v-for="year in data.years" :key="year">
             {{ year }}
           </b-dropdown-item>
         </b-dropdown>
 
-        <h2 class="mb-25">
-          ${{ data.price }}
-        </h2>
+        <h2 class="mb-25">${{ data.price }}</h2>
         <div class="d-flex justify-content-center">
           <span class="font-weight-bolder mr-25">Budget:</span>
           <span>56,800</span>
@@ -68,10 +55,7 @@
           :series="data.budgetChart.series"
         />
 
-        <b-button
-          v-ripple.400="'rgba(255, 255, 255, 0.15)'"
-          variant="primary"
-        >
+        <b-button v-ripple.400="'rgba(255, 255, 255, 0.15)'" variant="primary">
           Increase Budget
         </b-button>
       </b-col>
@@ -81,11 +65,16 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BDropdown, BDropdownItem, BButton,
-} from 'bootstrap-vue'
-import VueApexCharts from 'vue-apexcharts'
-import { $themeColors } from '@themeConfig'
-import Ripple from 'vue-ripple-directive'
+  BCard,
+  BRow,
+  BCol,
+  BDropdown,
+  BDropdownItem,
+  BButton,
+} from "bootstrap-vue";
+import VueApexCharts from "vue-apexcharts";
+import { $themeColors } from "@themeConfig";
+import Ripple from "vue-ripple-directive";
 
 export default {
   components: {
@@ -113,7 +102,7 @@ export default {
         chartOptions: {
           chart: {
             stacked: true,
-            type: 'bar',
+            type: "bar",
             toolbar: { show: false },
           },
           grid: {
@@ -126,12 +115,22 @@ export default {
             },
           },
           xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            categories: [
+              "Jan",
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+            ],
             labels: {
               style: {
-                colors: '#6E6B7B',
-                fontSize: '0.86rem',
-                fontFamily: 'Montserrat',
+                colors: "#6E6B7B",
+                fontSize: "0.86rem",
+                fontFamily: "Montserrat",
               },
             },
             axisTicks: {
@@ -150,17 +149,17 @@ export default {
           colors: [$themeColors.primary, $themeColors.warning],
           plotOptions: {
             bar: {
-              columnWidth: '17%',
-              endingShape: 'rounded',
+              columnWidth: "17%",
+              endingShape: "rounded",
             },
             distributed: true,
           },
           yaxis: {
             labels: {
               style: {
-                colors: '#6E6B7B',
-                fontSize: '0.86rem',
-                fontFamily: 'Montserrat',
+                colors: "#6E6B7B",
+                fontSize: "0.86rem",
+                fontFamily: "Montserrat",
               },
             },
           },
@@ -173,21 +172,21 @@ export default {
             height: 80,
             toolbar: { show: false },
             zoom: { enabled: false },
-            type: 'line',
+            type: "line",
             sparkline: { enabled: true },
           },
           stroke: {
-            curve: 'smooth',
+            curve: "smooth",
             dashArray: [0, 5],
             width: [2],
           },
-          colors: [$themeColors.primary, '#dcdae3'],
+          colors: [$themeColors.primary, "#dcdae3"],
           tooltip: {
             enabled: false,
           },
         },
       },
-    }
+    };
   },
-}
+};
 </script>
